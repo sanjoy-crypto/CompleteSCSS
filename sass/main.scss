@@ -1,0 +1,40 @@
+// Install Live Sass Compiler and Active it
+
+// Partials
+@import "mixin";
+@import "var";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main_header {
+  @include flexprob;
+  width: 100%;
+  height: 100vh;
+  background: $bg-color;
+
+  //  We can use Nesting
+
+  h1 {
+    color: white;
+    //   We can use Operators
+    // font-size: 30px + 20px;
+
+    @include commoncode(10px, capitalize);
+
+    &:hover {
+      color: brown;
+    }
+    &::after {
+      content: " My Subscriber";
+    }
+  }
+  p {
+    @include commoncode(3px, uppercase);
+    &:hover {
+      color: purple;
+    }
+  }
+}

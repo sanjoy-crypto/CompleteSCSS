@@ -1,0 +1,15 @@
+// We can use mixin
+@mixin flexprob {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+// We can use Parameters
+@mixin commoncode($letter_spacing, $text_transform) {
+  color: white;
+  font-size: 30px + 20px;
+  text-transform: $text_transform;
+  letter-spacing: $letter_spacing;
+}
